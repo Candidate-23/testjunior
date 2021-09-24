@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit_calculator</title>
+    
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker($.datepicker.regional[ "ru" ] );
+    } );
+    </script>
+    <script src="/assets/datepicker-ru.js"></script>
+</head>
+<body>
+    <header class="header-logo">
+            <div class="header-container">
+                <div class="container-logo">
+                    <a href="#" class="logo-link">
+                    <img src="/assets/img/logo-light 1logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="container-description">
+                    <p class="describe-logo">Deposit Calculator</p>
+                </div>
+            </div>
+    </header>
+    <main>
+        <section class="title">
+                    <div class="section-container">
+                        <h1 class="title-deposit">ДЕПОЗИТНЫЙ КАЛЬКУЛЯТОР</h1>
+                        <h3 class="title-description">Калькулятор депозитов позволяет рассчитать ваши доходы после внесения суммы на счет в банке по опредленному тарифу.
+                        </h3>
+                    </div>    
+        </section>
+        <section class="section-input">
+                    <div class="section-container">
+                        <form action="https://my-json-server.typicode.com/typicode/demo/posts" class="form-block" method="POST">
+                            <ul class="list-form">
+                                <li class="item-list-form">
+                                    <input type="text" class="input" placeholder=" " name="StartDate" id="datepicker">
+                                    <label for="" class="label">Дата открытия</label></li>
+                                <li class="item-list-form item-select">
+                                    <div class="main-term-block">    
+                                        <div class="input-block-term">
+                                            <input type="number" class="input input-term" placeholder=" "  value="select-term" name="term">
+                                            <label for="select-term" class="label">Срок вклада</label>
+                                        </div>
+                                        <div class="select-block-term">
+                                            <div class="select-button">Год</div>
+                                                <ul class="list-select">
+                                                    <li class="list-select-item" data-value="month">Месяц</li>
+                                                    <li class="list-select-item" data-value="year">Год</li>
+                                                </ul>
+                                                <!-- <input type="text" name="select-category" value="" class="category-select-enter"> -->
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-list-form">
+                                    <input type="text" class="input" placeholder=" " minlength="4" maxlength="7" name="sum">
+                                    <label for="" class="label">Сумма вклада</label></li>
+                                <li class="item-list-form">
+                                    <input type="text" class="input" placeholder=" " name="percent">
+                                    <label for="" class="label">Процентная ставка, %</label></li>
+                                <li class="item-list-form">
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" class="checkbox" id="checkbox_1" value="" name="">
+                                        <label for="checkbox_1" class="labelbox" id="checkin">Ежемесячное пополнение вклада</label>
+                                     </div>
+                                </li>
+                                <li class="item-list-form">
+                                    <div class="add-sum" id="add-sum">
+                                        <input type="text" class="input" placeholder=" " name="sumAdd">
+                                        <label for="checked" class="label">Сумма пополнения вклада</label>
+                                    </div>   
+                                </li>
+                                <li class="item-list-form">
+                                    <button class="button" type="submit">Рассчитать</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+        </section>
+        <section class="result">
+            <div class="section-container">
+              
+                
+            <div class="container-result">
+                <p class="result-text">Сумма к выплате:</p>
+            </div>
+            </div>      
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
